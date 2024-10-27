@@ -1,4 +1,4 @@
-/*  || reset   */
+/* /* /* /* /* /* /* /* /* /* /* /* /* /* /* /*  || reset   
 
 *,
 *::after,
@@ -22,12 +22,12 @@ textarea{
 
 /*  || variable   */
 
-:root{
-    /*  || fonts   */
+/* :root{ */
+    /*  || fonts   
     --FF: "nunito",sans-serif;
     --FF-HEADINGS: "fufaz one",cursive;
     --FS:clamp(1rem,2.2vh,1.5rem);
-    /*  || colors   */
+    /*  || colors   
     --BGCOLOR: orange;
     --BGCOLOR-FADE:rgb(252,220,160);
     --BGIMAGE: linear-gradient(to bottom ,var(--BGCOLOR),var(--BGCOLOR-FADE));
@@ -38,11 +38,11 @@ textarea{
     --LINK-COLOR:#000;
     --LINK-HOVER:hsla(0,0%,0%,0.6);
     --LINK-ACTIVE: orange;
-    /*  || borders   */
+    /*  || borders   
     --BORDERS: 1px solid var(--BORDER-COLOR);
 
 }
-/*  || unity classes   */
+/*  || unity classes  
 
 .offscreen{
     position: absolute;
@@ -58,7 +58,7 @@ textarea{
 
 }
 
-/*  || feneral styles   */
+/*  || feneral styles  
 
 html{
     scroll-behavior: smooth;
@@ -105,4 +105,320 @@ a:hover,a:focus-visible{
 a:active{
     color: var(--LINK-ACTIVE);
      
+}*/
+
+/* Reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fefaf6;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Base Styles */
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #b85c38;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(to right, #b85c38, #8e4b34);
+    color: #fff;
+    padding: 1.5rem 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header__h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.header__nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 1rem 0;
+}
+
+.header__ul li {
+    margin: 0 20px;
+}
+
+.header__ul a {
+    color: #f8f5f2;
+    font-weight: bold;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+.header__ul a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 50%;
+    bottom: -5px;
+    background-color: #ffe5d9;
+    transition: all 0.3s;
+}
+
+.header__ul a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('../img/brews_and_bites.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 7rem 2rem;
+    color: #f8f5f2;
+    text-align: center;
+    position: relative;
+    min-height: 80vh;
+}
+
+.hero h2 {
+    font-size: 3.5rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin-bottom: 2rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero button {
+    background-color: #b85c38;
+    color: #fefaf6;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.hero button:hover {
+    background-color: #8e4b34;
+}
+
+/* Main Content */
+main {
+    padding: 3rem 0;
+    background: #f8f5f2;
+    border-radius: 8px;
+    margin: 2rem auto;
+    max-width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* About Section */
+#about {
+    max-width: 90%;
+    margin: auto;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    color: #8e4b34;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+#about p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+aside {
+    background-color: #ffe5d9;
+    padding: 1.5rem;
+    border-left: 5px solid #b85c38;
+    margin-top: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+aside h3 {
+    font-size: 1.8rem;
+    color: #b85c38;
+    margin-bottom: 0.5rem;
+}
+
+/* Menu Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+caption {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #b85c38;
+    padding: 1.5rem;
+}
+
+th, td {
+    padding: 1.2rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 1.1rem;
+}
+
+th {
+    background-color: #f4a261;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #fefaf6;
+}
+
+tr:hover {
+    background-color: #ffe5d9;
+}
+
+/* Footer */
+footer {
+    background-color: #b85c38;
+    color: #f8f5f2;
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+/* Gallery */
+figure {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+figcaption {
+    text-align: center;
+    font-size: 1rem;
+    color: #555;
+    margin-top: 0.5rem;
+}
+
+.gallery img {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Queries */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+    }
+
+    .hero {
+        padding: 8rem 0;
+    }
+
+    .header__ul a {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .header__ul li {
+        margin: 0 15px;
+    }
+
+    .hero h2 {
+        font-size: 2.8rem;
+    }
+
+    main {
+        max-width: 85%;
+    }
+}
+
+@media (max-width: 768px) {
+    .header__nav ul {
+        flex-direction: column;
+    }
+
+    .header__ul li {
+        margin: 10px 0;
+    }
+
+    .hero h2 {
+        font-size: 2.2rem;
+    }
+
+    main {
+        max-width: 95%;
+    }
+
+    #about p {
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 4rem 1rem;
+    }
+
+    .header__h1, .hero h2 {
+        font-size: 1.8rem;
+    }
+
+    th, td {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    button, input[type="submit"] {
+        padding: 0.7rem 1.2rem;
+    }
 }
